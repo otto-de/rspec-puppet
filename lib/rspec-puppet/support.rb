@@ -44,7 +44,7 @@ module RSpec::Puppet
           "import '#{path_to_manifest}.pp'",
           '',
         ].join("\n")
-      elsif File.exists?(Puppet[:modulepath])
+      elsif File.exists?(Puppet[:manifestdir])
         import_str = "import '#{Puppet[:manifest]}'\n"
       else
         import_str = ""
